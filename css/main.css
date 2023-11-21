@@ -1,0 +1,1094 @@
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* You can adjust the font weight as needed */
+  letter-spacing: 1px;
+  font-size: 36px;
+  /* You can adjust the font size as needed */
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+h4 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+h5 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+
+h1b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+
+h2b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* You can adjust the font weight as needed */
+  letter-spacing: 1px;
+  font-size: 36px;
+  /* You can adjust the font size as needed */
+}
+
+h3b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 24px;
+}
+
+h4b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+}
+
+h4bl {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-align: left;
+}
+
+h5b {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #000000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: white;
+}
+
+h1b,
+h2b,
+h3b,
+h4b,
+h4bl,
+h5b {
+  color: black;
+}
+
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(to top, #86377b 20%, #27273c 80%);
+  color: white;
+}
+
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 60vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  /*Fix for safari gap*/
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  background-color: white;
+}
+
+.container2 {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+  margin: 100px;
+}
+
+/* Animation */
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+
+  .content {
+    height: 10vh;
+  }
+
+  .container2 {
+    height: 5vh;
+    margin: 40px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
+
+
+
+/*navbar*/
+nav {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  /* Add flex display to arrange logo and menu side by side */
+  justify-content: space-between;
+  /* Space between logo and menu */
+  align-items: center;
+  /* Vertically center content */
+}
+
+.logo {
+  margin-left: 30px;
+  /* Adjust margin as needed */
+}
+
+.logo img {
+  max-width: 100%;
+  /* Ensure the image doesn't exceed its container width */
+  height: auto;
+  /* Maintain aspect ratio while resizing */
+  transform: scale(1);
+  /* Scale the image by 50% (1.5 times) */
+}
+
+nav ul {
+  float: right;
+  margin-right: 30px;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+
+nav ul li:hover {
+  border-radius: 25px;
+  background-color: #d882f8;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 30px;
+}
+
+nav ul li.current-page {
+  border-radius: 25px;
+  background-color: #d463fd;
+}
+
+/* Add this CSS for the mobile menu */
+.mobile-menu-button {
+  display: none;
+  /* Initially hide the mobile menu button */
+  margin-right: 10px;
+}
+
+/* Add this CSS for the hamburger icon rotation */
+.mobile-menu-button svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-menu-button.open svg {
+  transform: rotate(-90deg);
+}
+
+
+/* Add this CSS for the mobile menu animations */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  /* Initially hidden */
+  font-size: 16px;
+  /* Font size for navbar items */
+  font-family: Arial, sans-serif;
+  /* Font family for navbar text */
+  border-bottom: 1px solid #404040;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.mobile-menu.open {
+  display: flex;
+  animation-name: fadeIn;
+}
+
+.mobile-menu.closed {
+  animation-name: fadeOut;
+  animation-fill-mode: forwards;
+  display: none;
+}
+
+/* Update the CSS for the buttons */
+.mobile-menu a {
+  padding: 3px;
+  /* Adjust the padding as needed */
+  border-bottom: 0.5px solid #555;
+  /* Add a bottom border to create separation lines */
+  text-decoration: none;
+  /* Remove underlines from links */
+  display: block;
+  /* Make buttons take up the full width of the container */
+  color: inherit;
+  /* Inherit text color */
+}
+
+
+
+/* Media query to display the mobile menu and button on small screens */
+@media (max-width: 930px) {
+  .desktop-menu {
+    display: none;
+    /* Hide desktop menu on small screens */
+  }
+
+  .mobile-menu-button {
+    display: block;
+    /* Show the mobile menu button */
+  }
+
+  .mobile-menu.open {
+    display: flex;
+    /* Show the mobile menu when it's open */
+  }
+}
+
+
+/*footer*/
+
+
+
+
+
+
+
+
+/* Default styles for desktop */
+.content {
+  position: relative;
+  text-align: center;
+  background-color: white;
+  margin-bottom: 0px;
+  margin-top: 40px;
+}
+
+
+
+
+.serviceBox {
+  background: #e6e6e6;
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  padding: 40px 15px 25px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.serviceBox:before,
+.serviceBox:after {
+  content: "";
+  background: linear-gradient(to bottom, #f36b23, #f68e1d);
+  width: 100%;
+  height: 40px;
+  border-radius: 10px 10px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.serviceBox:after {
+  background: #f36b23;
+  top: auto;
+  bottom: 0;
+  height: 10px;
+  border-radius: 0 0 10px 10px;
+}
+
+.serviceBox .title {
+  color: #fff;
+  background: #f36b23;
+  font-size: 17px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 10px 12px 9px;
+  margin: -10px 0 18px;
+  display: inline-block;
+  position: relative;
+}
+
+.serviceBox .title:before,
+.serviceBox .title:after {
+  content: "";
+  background: linear-gradient(to top left, #c14f1d 49%, transparent 50%);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: -10px;
+}
+
+.serviceBox .title:after {
+  transform: rotateY(180deg);
+  left: auto;
+  right: -10px;
+}
+
+.serviceBox .service-icon {
+  color: #f36b23;
+  font-size: 50px;
+  line-height: 50px;
+  margin: 0 0 15px;
+}
+
+.serviceBox .description {
+  color: #000000;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.serviceBox.purple:before {
+  background: linear-gradient(#c64292, #d8569f);
+}
+
+.serviceBox.purple:after,
+.serviceBox.purple .title {
+  background: #c64292;
+}
+
+.serviceBox.purple .title:before,
+.serviceBox.purple .title:after {
+  background: linear-gradient(to top left, #962185 49%, transparent 50%);
+}
+
+.serviceBox.purple .service-icon {
+  color: #c64292;
+}
+
+
+
+.serviceBox.blue:before {
+  background: linear-gradient(#0a78bd, #0087db);
+}
+
+.serviceBox.blue:after,
+.serviceBox.blue .title {
+  background: #009dff;
+}
+
+.serviceBox.blue .title:before,
+.serviceBox.blue .title:after {
+  background: linear-gradient(to top left, #009dff 49%, transparent 50%);
+}
+
+.serviceBox.blue .service-icon {
+  color: #009dff;
+}
+
+
+
+.serviceBox.cgreen:before {
+  background: linear-gradient(#2da197, #4bb8ad);
+}
+
+.serviceBox.cgreen:after,
+.serviceBox.cgreen .title {
+  background: #2da197;
+}
+
+.serviceBox.cgreen .title:before,
+.serviceBox.cgreen .title:after {
+  background: linear-gradient(to top left, #1b817b 49%, transparent 50%);
+}
+
+.serviceBox.cgreen .service-icon {
+  color: #2da197;
+}
+
+.serviceBox.green:before {
+  background: linear-gradient(#82c145, #b1d23f);
+}
+
+.serviceBox.green:after,
+.serviceBox.green .title {
+  background: #82c145;
+}
+
+.serviceBox.green .title:before,
+.serviceBox.green .title:after {
+  background: linear-gradient(to top left, #41a133 49%, transparent 50%);
+}
+
+.serviceBox.green .service-icon {
+  color: #82c145;
+}
+
+/* Add this CSS to ensure the service boxes are on the same line */
+.service-container {
+  margin-top: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.serviceBox {
+  margin: 0 10px;
+  /* Add margin for spacing between service boxes */
+  flex: 1;
+  /* Allow the service boxes to grow and occupy available space */
+  max-width: 32%;
+  /* Limit the width of each service box to 50% to keep them side by side */
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 930px) {
+  .service-container {
+    margin: 5px;
+    flex-direction: column;
+    /* Stack the service boxes vertically */
+  }
+
+  .serviceBox {
+    margin: 5px 0;
+    /* Add margin for spacing between stacked service boxes */
+    width: 80%;
+    max-width: 80%;
+    /* Allow each service box to take up the full width */
+  }
+}
+
+
+/*button*/
+/* Center the navb element and its content */
+/* Default styles for desktop */
+navb {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  text-align: center;
+}
+
+
+/* Media query for mobile devices */
+@media (max-width: 930px) {
+  .content {
+    height: 20px;
+    line-height: 20px;
+  }
+}
+
+navb ul {
+  margin: 0;
+  padding: 0;
+}
+
+navb ul li {
+  list-style-type: none;
+  display: inline-block;
+  transition: 0.7s all;
+}
+
+navb ul li:hover {
+  border-radius: 25px;
+  background-color: #d882f8;
+}
+
+navb ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 30px;
+}
+
+navb ul li.current {
+  border-radius: 25px;
+  background-color: #d882f8;
+}
+
+navb ul li.current:hover {
+  border-radius: 25px;
+  background-color: #bb00ff;
+}
+
+
+/*type effect*/
+.typewrite>.wrap {
+  color: #fff;
+  font-family: 'Swanky and Moo Moo', cursive;
+}
+
+
+
+/*scroll btn*/
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.scroll-down {
+  opacity: 1;
+  -webkit-transition: all .5s ease-in 3s;
+  transition: all .5s ease-in 3s;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  margin-left: -16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  border: 2px solid #000000;
+  background-size: 14px auto;
+  border-radius: 50%;
+  z-index: 2;
+  -webkit-animation: bounce 2s infinite 2s;
+  animation: bounce 2s infinite 2s;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+.scroll-down:before {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(50% - 6px);
+  transform: rotate(-45deg);
+  display: block;
+  width: 12px;
+  height: 12px;
+  content: "";
+  border: 2px solid black;
+  border-width: 0px 0 2px 2px;
+}
+
+@keyframes bounce {
+
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px);
+  }
+}
+
+
+
+
+
+
+/*footer*/
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to top, #27273c 20%, #b854aa 80%);
+  min-height: 100px;
+  padding: 20px 50px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+.menu {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.social-icon__item,
+.menu__item {
+  list-style: none;
+}
+
+.social-icon__link {
+  font-size: 2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.menu__link {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+  text-decoration: none;
+  opacity: 0.75;
+  font-weight: 300;
+}
+
+.menu__link:hover {
+  opacity: 1;
+}
+
+.footer p {
+  color: #fff;
+  margin: 15px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wavee {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("/img/wavep.jpg");
+  background-size: 1000px 100px;
+}
+
+.wavee#wavee1 {
+  z-index: 1000;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 7s linear infinite;
+}
+
+.wavee#wavee2 {
+  z-index: 999;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 6s linear infinite !important;
+}
+
+.wavee#wavee3 {
+  z-index: 1000;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 5s linear infinite;
+}
+
+.wavee#wavee4 {
+  z-index: 999;
+  opacity: 0.7;
+  bottom: 20px;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+
+  100% {
+    background-positon-x: 0px;
+  }
+}
+
+
+/*Design Badges*/
+.badges-info-list {
+  padding-top: 55px;
+  padding-bottom: 20px;
+  list-style: none;
+}
+
+.badges-info-list li {
+  margin-bottom: 30px;
+}
+
+.badges-info-list .cf-left {
+  width: 95px;
+  float: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.badges-info-list .cf-left1 {
+  width: 205px;
+  float: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.badges-info-list .cf-right {
+  color: #000000;
+  font-size: 15px;
+  padding-left: 100px;
+}
+
+.badges-info-list .cf-right {
+  color: #000000;
+  font-size: 15px;
+  padding-left: 100px;
+}
+
+
+/* Contact */
+
+.float-container {
+  border: 3px solid #fff;
+  padding: 20px;
+}
+
+.float-smallcontainer {
+  padding: 20px;
+  border: 2px solid white;
+}
+
+/* Desktop layout: side by side */
+@media (min-width: 930px) {
+  .float-smallcontainer {
+    width: 50%;
+    float: left;
+  }
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-control {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea.form-control {
+  resize: vertical;
+}
+
+.btn {
+  background-color: #cd42ba;
+  color: #fff;
+  border: none;
+  padding: 15px 50px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn:hover {
+  background-color: #b5039d;
+}
+
+
+
+
+
+
+.text-container {
+  text-align: left;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+input {
+  font-size: 16px;
+  padding: 5px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 200px;
+}
+
+button {
+  font-size: 16px;
+  padding: 5px 10px;
+  background-color: #ee82ee;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #da70d6;
+}
+
+#rescheck {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+#random-numbers {
+  font-size: 200px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+label[for="num-of-numbers"] {
+  color: #000000;
+}
+
+label[for="min-number"] {
+  color: #000000;
+}
+
+label[for="max-number"] {
+  color: #000000;
+}
+
+label[for="print-time"] {
+  color: #000000;
+}
+
+label[for="semn"] {
+  color: #000000;
+}
+
+label[for="result-input"] {
+  color: #000000;
+}
+
+
+/* Style for the Latest Posts section */
+.latest-posts {
+  background-color: #f9f9f9;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Style for individual post cards */
+.post-card {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Style for post images */
+.post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style for post content */
+.post-content {
+  padding: 20px;
+}
+
+/* Style for post titles */
+.post-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Style for post publication dates */
+.post-date {
+  color: #888;
+}
+
+/* Style for "Read More" links */
+.read-more {
+  text-decoration: none;
+  color: #0074d9;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Hover effect for post cards */
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Style for the latest post */
+.latest-post {
+  background-color: #fff;
+  color: #000000;
+  padding: 20px;
+}
